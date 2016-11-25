@@ -13,7 +13,7 @@ public class Test {
 		//Act
 		//Try to rename the GameObject
 		var newGameObjectName = "My game object";
-		gameObject.name = newGameObjectName + "asd";
+		gameObject.name = newGameObjectName;
 
 		//Assert
 		//The object has a new name
