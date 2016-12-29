@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour {
 	void Start() {
 		nextNode = startNode;
 		health = 1;
+		GetComponentInChildren<Renderer>().material.color = new Color(Random.Range(0.0f, 1), Random.Range(0.0f, 1), Random.Range(0.0f, 1));
 	}
 
 	void Update() {
