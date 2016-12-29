@@ -11,7 +11,7 @@ public class Test {
 		var gameObject = new GameObject();
 		
 		var newGameObjectName = "My game object";
-		gameObject.name = newGameObjectName + "-";
+		gameObject.name = newGameObjectName;
 		
 		Assert.AreEqual(newGameObjectName, gameObject.name);
 	}
