@@ -17,11 +17,7 @@ public class Test {
 	}
 
 	[Test]
-<<<<<<< HEAD
 	public void TestConnectedNodes() {
-=======
-	public void TestNodes() {
->>>>>>> ea1899b33252083690ec4b67eb96f2903fbf7419
 		Node cur = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().startNode;
 		List<GameObject> nodes = new List<GameObject>(GameObject.FindGameObjectsWithTag("Node"));
 
