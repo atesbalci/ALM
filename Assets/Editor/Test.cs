@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 public class Test {
 
@@ -10,8 +11,21 @@ public class Test {
 		var gameObject = new GameObject();
 		
 		var newGameObjectName = "My game object";
-		gameObject.name = newGameObjectName;
+		gameObject.name = newGameObjectName + "-";
 		
 		Assert.AreEqual(newGameObjectName, gameObject.name);
+	}
+
+	[Test]
+	public void TestConnectedNodes() {
+		Node cur = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>().startNode;
+		List<GameObject> nodes = new List<GameObject>(GameObject.FindGameObjectsWithTag("Node"));
+
+		while(cur != null) {
+			nodes.Remove(cur.gameObject);
+			cur = cur.next;
+		}
+
+		Assert.AreEqual(nodes.Count, 0);
 	}
 }
